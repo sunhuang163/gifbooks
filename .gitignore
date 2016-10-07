@@ -1,4 +1,17 @@
 
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
 /tmp/
 /media/
 /static/
@@ -12,3 +25,4 @@
 /utils/21.txt
 /utils/fun/
 /media/upload/
+*.pyc
