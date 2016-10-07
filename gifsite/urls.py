@@ -68,9 +68,9 @@ info_dict = {
 urlpatterns = [
                   url(r'^', include(router.urls)),
                   url(r'^api/', include(ArticleRouter.urls)),
-                  # url(r'^mp4/$', mp4views.index),
+                  
                   url(r'^mp4/', include("mp4.urls"), name="mp4"),
-                  url(r'^grappelli/', include('grappelli.urls')),  # grappelli URLS
+                 
                   url(r'^admin/', admin.site.urls),
 
                   url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
