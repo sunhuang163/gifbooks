@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello React!</title>
+    <!-- 以下引入 react.js, react-dom.js（react 0.14 後將 react-dom 從 react 核心分離，更符合 react 跨平台抽象化的定位）以及 babel-core browser 版 -->
+
+    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+    url = "/api/article/?format=json&offset=40"
+    $.getJSON(url, function (json) {
+
+
+        $.each(json.results, function (i, value) {
+            title = value.title
+            snapshot = value.snapshot
+            gif = value.fromlink
+
+            var liObj = $("<li>").attr("id", 'li_' + i);
+            var imgObj = $("<img>").attr("src", gif);
+            var imgSnap = $("<img>").attr("src", snapshot);
+            var title1=$("<p>").text(title)
+            console.log(imgObj)
+            liObj.append(title1).appendTo("#lists");
+{#            liObj.append(imgSnap).appendTo("#lists");#}
+            liObj.append(imgObj).appendTo("#lists");
+
+        });
+
+    });
+</script>
+</head>
+<body>
+<!-- 這邊的 id="example" 的 <div> 為 React Component 要插入的地方 -->
+
+<ul id="lists"></ul>
+
+</body>
+</html>

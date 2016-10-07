@@ -2,14 +2,14 @@ from django.contrib import admin
 from .models import Category,Articles,Tags,Sitelists
 # Register your models here.
 class ArticleAdmin(admin.ModelAdmin):
-    list_per_page = 50
-    list_display = ('site','title','preview','fromlink')
+    list_per_page = 25
+    list_display = ('site','title','preview')
     list_filter = ('site','created_date')
     date_hierarchy = 'created_date'
     search_fields = ('title',)
     def preview(self, obj):
         if ".gif" in obj.fromlink:
-            return '<img src="%s" height="80" width="128" />' % (obj.fromlink)
+            return '<img src="%s" height="80" width="128" /> <img src="/media/%s" height="80" width="128" />' % (obj.fromlink,obj.snapshot)
         else:
             return None
     preview.allow_tags = True

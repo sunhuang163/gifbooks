@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{{ request.path }}?{{ request.GET.urlencode }}">当前网址加参数 delete</a>
+<ul>
+{% if request.user.is_authenticated %}
+    {{ request.user.username }}，您好！
+{% else %}
+    请登陆，这里放登陆链接
+{% endif %}
+{% for mp4 in mp4_lists %}
+    <li>
+    {{ mp4.site_name.link }}
+{#        <video  width="320" height="240" controls="controls"><source src="{{ mp4.video_url }}" type="video/mp4" /></video>#}
+    </li>
+{% endfor %}
+</ul>
+</body>
+</html>
