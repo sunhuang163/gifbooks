@@ -7,7 +7,7 @@ import django
 django.setup()
 from mp4.models import Video,Sitelists
 from utils.meipai import getmeipai
-contents=getmeipai(startpage=1,endpage=3)
+contents=getmeipai(startpage=120,endpage=320)
 site=Sitelists.objects.first()
 for cs in contents:
     for c in cs:
