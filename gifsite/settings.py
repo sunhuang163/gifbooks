@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'mp4',
     'rest_framework',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'novels'
 
 ]
 
@@ -92,26 +93,26 @@ WSGI_APPLICATION = 'gifsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
-
 DATABASES = {
-
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'gifbooks',                       
-        'USER': 'root',                      
-        'PASSWORD':'zhx!0218',                   
-        'HOST': '',                           
-        'PORT': '',                           
-        'OPTIONS': {
-            'autocommit': True,
-        },
-    }}
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
+}
+#
+# DATABASES = {
+#
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'gifbooks',
+#         'USER': 'root',
+#         'PASSWORD':'zhx!0218',
+#         'HOST': '',
+#         'PORT': '',
+#         'OPTIONS': {
+#             'autocommit': True,
+#         },
+#     }}
 
 #CACHES = {
 #    'default': {
