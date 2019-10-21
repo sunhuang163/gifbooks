@@ -9,7 +9,7 @@ django-ckeditor==5.1.1
 django-dbbackup==3.0.3
 django-debug-toolbar==1.6
 django-filter==0.15.2
-djangorestframework==3.4.7
+djangorestframework==3.9.1
 gunicorn==19.6.0
 html5lib==0.999
 language-selector==0.1
