@@ -24,7 +24,7 @@ django-tinymce==2.4.0
 djangorestframework==3.4.7
 Flask==0.11.1
 future==0.15.2
-html5lib==0.999999999
+html5lib==0.99999999
 httpie==0.9.6
 image==1.5.5
 ipython==5.1.0

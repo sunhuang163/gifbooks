@@ -11,7 +11,7 @@ django-debug-toolbar==1.6
 django-filter==0.15.2
 djangorestframework==3.4.7
 gunicorn==19.6.0
-html5lib==0.999
+html5lib==0.99999999
 language-selector==0.1
 pycurl==7.19.3
 pygobject==3.12.0
